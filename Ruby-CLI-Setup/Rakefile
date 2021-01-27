@@ -5,14 +5,14 @@ require 'sinatra/activerecord/rake'
 require 'colorize'
 
 desc "Start our app console"
-task :console do
+task :c do
   ActiveRecord::Base.logger = Logger.new(STDOUT)
   Pry.start
 end
 
 desc "start our app"
 task :start do
-  app = nameOfYourApp.new
+  app = UberForDogs.new
   app.run
 end
 
